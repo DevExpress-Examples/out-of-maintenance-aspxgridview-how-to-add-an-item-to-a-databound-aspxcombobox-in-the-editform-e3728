@@ -1,0 +1,10 @@
+# ASPxGridView - How to add an item to a databound ASPxComboBox in the EditForm
+
+
+<p>This sample demonstrates how to use ASPxGridView to add and edit items of ASPxComboBox that is placed within a grid EditForm. By design, ASPxGridView can update its own rendering when processing a callback, but not the rending of outside controls. Thus, it is necessary to perform an ASPxComboBox callback when the Product grid’s data has been changed. Handle the grid’s EndCallback event for this. To overcome the circularity, also handle the grid’s BeginCallback event, as it is described in the <a href="https://www.devexpress.com/Support/Center/p/E3578">E3578</a> example. </p><p>By design, ASPxComboBox selects the first item after processing its own callback. If you wish to select another item or unselect all items, handle the <a href="http://documentation.devexpress.com/#AspNet/DevExpressWebASPxEditorsScriptsASPxClientComboBox_EndCallbacktopic"><u>ASPxClientComboBox.EndCallback</u></a> or <a href="http://documentation.devexpress.com/#AspNet/DevExpressWebASPxPopupControlScriptsASPxClientPopupControlBase_CloseUptopic"><u>ASPxClientPopupControl.CloseUp</u></a> event and execute required actions. In this example, all items become unselected after a combo box callback.</p><p></p><p><strong>See also:</strong><br />
+<a href="https://www.devexpress.com/Support/Center/p/E3578">ASPxGridView - How to refresh a master grid when a detail grid has been updated</a><br />
+<a href="https://www.devexpress.com/Support/Center/p/E3741">GridView - How to add an item to a databound ComboBox in a grid EditForm</a></p>
+
+<br/>
+
+
